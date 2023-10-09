@@ -8,6 +8,9 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use("/products", router);
+app.get("/", (request, response) => {
+  response.send("<h1>Home</h1>");
+});
 
 app.use("/images", express.static("./images"));
 
