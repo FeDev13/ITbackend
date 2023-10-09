@@ -1,26 +1,26 @@
 const { sequelize } = require("../config/db");
-const { DataTypes } = require("sequelize");
+const { Sequelize } = require("sequelize");
 
 const Product = sequelize.define("Product", {
   id: {
     allowNull: false,
-    type: DataTypes.INTEGER,
+    type: Sequelize.INTEGER,
     primaryKey: true,
   },
   name: {
-    type: DataTypes.STRING,
+    type: Sequelize.STRING,
     validate: {
       max: 150,
     },
   },
   description: {
-    type: DataTypes.TEXT,
+    type: Sequelize.TEXT,
   },
   img_Url: {
-    type: DataTypes.STRING,
+    type: Sequelize.STRING,
   },
   price: {
-    type: DataTypes.INTEGER,
+    type: Sequelize.INTEGER,
   },
 });
 

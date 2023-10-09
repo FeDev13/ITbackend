@@ -10,7 +10,7 @@ const getAllProducts = async (request, response) => {
 };
 
 const AddProduct = async (req, res) => {
-  /* let info = {
+  /*  let info = {
     id: req.body.id,
     name: req.body.name,
     description: req.body.description,
