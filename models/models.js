@@ -8,6 +8,7 @@ const Product = sequelize.define("Product", {
     primaryKey: true,
     allowNull: true,
     defaultValue: 5,
+    unique: true,
   },
   name: {
     type: DataTypes.STRING,
