@@ -11,7 +11,7 @@ const getAllProducts = async (request, response) => {
 };
 
 const AddProduct = async (req, res) => {
-  /*  let info = {
+  let info = {
     id: req.body.id,
     name: req.body.name,
     description: req.body.description,
@@ -21,8 +21,8 @@ const AddProduct = async (req, res) => {
 
   const product = await Product.create(info);
   res.status(200).send(product);
-  console.log(product); */
-  try {
+  console.log(product);
+  /* try {
     if (req.file === null) {
       return res.status(400).send({ message: "No file was uploaded" });
     }
@@ -55,7 +55,7 @@ const AddProduct = async (req, res) => {
     res.json(response);
   } catch (e) {
     console.log(e);
-  }
+  } */
 };
 
 const getProductById = async (request, response) => {
@@ -115,8 +115,6 @@ const deleteProduct = async (request, response) => {
 
   response.status(204).json({});
 };
-
-//testimonials controllers
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
