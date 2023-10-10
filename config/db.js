@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
 
-/* const sequelize = new Sequelize(
+const sequelize = new Sequelize(
   "bnofci2q2iyfzlg6ufnk",
   "uqktze0kixbjxzwp",
   "ZAKuccGfBMH1bN3kvhk0",
@@ -8,11 +8,11 @@ const { Sequelize } = require("sequelize");
     dialect: "mysql",
     host: "bnofci2q2iyfzlg6ufnk-mysql.services.clever-cloud.com",
   }
-); */
-const sequelize = new Sequelize("raquets", "root", "", {
+);
+/* const sequelize = new Sequelize("raquets", "root", "", {
   dialect: "mysql",
   host: "localhost",
-});
+}); */
 
 const connectToDb = async () => {
   try {
