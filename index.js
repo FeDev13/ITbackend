@@ -2,6 +2,7 @@ const express = require("express");
 const { sequelize, connectToDb } = require("./config/db");
 const bodyParser = require("body-parser");
 const router = require("./routes/routes");
+const userRouter = require("./routes/userRoutes");
 
 const app = express();
 const PORT = 3000;
@@ -12,6 +13,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/products", router);
+app.use("/users", userRouter);
+
 app.get("/", (request, response) => {
   response.send("<h1>Home</h1>");
 });

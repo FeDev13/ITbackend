@@ -2,6 +2,7 @@ const Product = require("../models/models");
 const multer = require("multer");
 const path = require("path");
 
+//products controllers
 const getAllProducts = async (request, response) => {
   //"/products"
   const products = await Product.findAll();
@@ -58,7 +59,6 @@ const AddProduct = async (req, res) => {
 };
 
 const getProductById = async (request, response) => {
-  //"/product/:id"
   const product = await Product.findOne({
     where: {
       id: request.params.id,
@@ -69,7 +69,6 @@ const getProductById = async (request, response) => {
 };
 
 const patchProduct = async (request, response) => {
-  //"/product/:id"
   const product = await Product.findOne({
     where: {
       id: request.params.id,
@@ -116,6 +115,8 @@ const deleteProduct = async (request, response) => {
 
   response.status(204).json({});
 };
+
+//testimonials controllers
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
