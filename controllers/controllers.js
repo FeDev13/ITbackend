@@ -30,6 +30,7 @@ const AddProduct = async (req, res) => {
     const url = req.protocol + "://" + req.get("host");
     const urlImage = url + "/images/" + req.body.filename;
     const modelData = {
+      id: req.body.id,
       name: req.body.name,
       description: req.body.description,
       image: urlImage,
